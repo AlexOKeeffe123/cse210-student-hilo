@@ -1,5 +1,4 @@
 import random
-
 class Dealer:
     """A code template for a person who deals cards in the game. The responsibility of 
     this class is to keep an arrauy of cards and deal the cards to the player.
