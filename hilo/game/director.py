@@ -1,4 +1,4 @@
-import dealer
+from dealer import Dealer
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -13,11 +13,18 @@ class Director:
 
     #pedro
     def __init__(self):
-        self.isRunning = True
+        self.dealer = Dealer()
+        self.score = 300
 
     #alex
     def play_round(self):
-        pass
+
+        self.get_cards()
+        if  self.blank == True:
+            self.score += 100
+        else:
+            self.score =+ 75
+        return self.score
 
     #chase
     def get_cards(self):
@@ -25,4 +32,8 @@ class Director:
 
     #alex
     def run_game(self):
-        pass
+        while (self.isRunnning):
+            Keep_playing= input("Keeping playing [y/n] ")
+            if Keep_playing.lower() == "n" or self.score == 0:
+                self.isRunnning = False
+            
