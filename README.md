@@ -39,4 +39,4 @@ root                    (project root folder)
 * Chase Duggan - dug21002@byui.edu
 * Alex Okeefe - oke20002@byui.edu
 * Eber Torres - tor16002@byui.edu
-* Pedro Tambriz - 
+* Pedro Tambriz - pt248o@byui.edu
