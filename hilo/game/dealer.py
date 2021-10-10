@@ -10,6 +10,11 @@ class Dealer:
 
     #eber
     def __init__(self):
+        """Initializes the dealer class object with a deck of cards.
+
+        Args:
+            self (Dealer): An instance of Dealer.
+        """
         cards = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"]
 
     #tyson
@@ -17,7 +22,7 @@ class Dealer:
         """Deals (prints) a random card to the user.
 
         Args:
-            self (Director): An instance of Dealer.
+            self (Dealer): An instance of Dealer.
         Returns:
             int: Value representing the integer representation of the card for comparison.
         """
@@ -30,7 +35,7 @@ class Dealer:
         """Deals (prints) a random card to the user.
 
         Args:
-            self (Director): An instance of Dealer.
+            self (Dealer): An instance of Dealer.
         Returns:
             int: Value representing the integer representation of the card for comparision.
         """
