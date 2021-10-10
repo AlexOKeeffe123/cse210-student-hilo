@@ -35,4 +35,8 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+* Tyson Freeze - fre21024@byui.edu
+* Chase Duggan - dug21002@byui.edu
+* Alex Okeefe - oke20002@byui.edu
+* Eber Torres - tor16002@byui.edu
+* Pedro Tambriz - 

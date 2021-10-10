@@ -1,4 +1,4 @@
-from dealer import Dealer
+from game.dealer import Dealer
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -24,16 +24,17 @@ class Director:
 
     #alex
     def play_round(self):
-        """Plays one round of High Low and updates the score accordingly (+100 for a win, -75 for a loss).
+        """Plays one round of High Low and updates the score accordingly (+100 for a win, -75 for a loss)
+        and reports it to the user.
 
         Args:
             self (Dealer): An instance of Dealer.
         """
-        guess = self.get_cards()
-        if guess == True:
+        if self.get_cards():
             self.score += 100
         else:
             self.score -= 75
+        print(f"Your score is: {self.score}")
 
     #chase
     def get_cards(self):
@@ -47,24 +48,13 @@ class Director:
             boolean: values represent one of two values, True or False. For comparing card1 and card2.
         """
         card1 = self.dealer.deal_first_card()
-        guess = input(f'High or Low? (h/l)').lower
-        
+        guess = input(f'High or Low? (h/l)').lower()
         card2 = self.dealer.deal_second_card()
-        if guess == 'l':
-            if card2 <= card1:
-                return True
-            else:
-                return False
-        elif guess == 'h':
-            if card2 >= card1:
-                return True
-            else:
-                return False
 
-        
-
-
-        
+        if guess == 'h':
+            return card2 >= card1
+        else:
+            return card2 <= card1
 
     #alex
     def run_game(self):
@@ -73,8 +63,8 @@ class Director:
         Args:
             self (Dealer): An instance of Dealer.
         """
-        while (self.isRunnning):
-            isRunning = input("Keeping playing [y/n] ")
+        while (self.isRunning):
             self.play_round()
-            if isRunning.lower() == "n" or self.score <= 0:
-                self.isRunnning = False
+            keep_running = input("Keeping playing [y/n] ")
+            if keep_running.lower() == "n" or self.score <= 0:
+                self.isRunning = False
