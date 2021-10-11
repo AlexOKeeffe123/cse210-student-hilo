@@ -6,6 +6,7 @@ class Dealer:
 
     Attributes:
         cards (string array): Array of 13 strings representing card values.
+        changes
     """
 
     #eber
